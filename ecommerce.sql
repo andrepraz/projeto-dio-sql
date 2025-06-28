@@ -3,21 +3,21 @@ create database ecommerce;
 use ecommerce;
 create table if not exists clientes (
 	id_cliente int not null primary key auto_increment,
-    nome varchar(50),
-    sobrenome varchar(50),
-    cpf char(11),
-    conta enum('PJ', 'PF') default 'PF',
-    endereco varchar(100),
-    constraint cpf_unique unique(cpf)
+	nome varchar(50),
+	sobrenome varchar(50),
+	cpf char(11),
+	conta enum('PJ', 'PF') default 'PF',
+	endereco varchar(100),
+	constraint cpf_unique unique(cpf)
 );
 
 create table if not exists produtos (
 	id_produto int not null primary key auto_increment,
 	nome_produto varchar(100) not null,
 	categoria enum('Eletrônico', 'Alimentos', 'Brinquedo') not null,
-    avaliacao float default 0.0,
-    tamanho varchar(10),
-    constraint nome_produto_unique unique (nome_produto)
+	avaliacao float default 0.0,
+	tamanho varchar(10),
+	constraint nome_produto_unique unique (nome_produto)
 );
 
 -- definir modo pagamento, cartao, dinheiro
