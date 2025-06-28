@@ -3,6 +3,8 @@ Este projeto visa estruturar um banco de dados para um cenário de e-commerce, a
 
 # Estrutura do Banco de Dados
 
+## Diagrama EER
+![Diagrama EER](eer.png)
 ## Tabelas Principais
 - Clientes: Armazena informações dos clientes.
 - Produtos: Contém dados dos produtos disponíveis.
